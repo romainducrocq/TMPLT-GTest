@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PATH_CONF="../include/"
+CONF_D=""
 
 funcs=(
 "assert"
@@ -44,12 +44,12 @@ function get_tr_lead_args () {
 }
 
 function get_default_args () {
-    args=$(cat "${PATH_CONF}"'conf.hpp' | grep "$1" -A 1 | sed -n 2p | sed -e 's/^[[:space:]]*//')
+    args=$(cat '../include/'"${CONF_D}"'conf.hpp' | grep "$1" -A 1 | sed -n 2p | sed -e 's/^[[:space:]]*//')
     echo "${args}"
 }
 
 function get_conf_param () {
-    param=$(cat "${PATH_CONF}"'conf.hpp' | grep $(echo ':'"$1"' ') | tail -1 | cut -d'=' -f 2 | cut -d';' -f 1 | sed -e 's/^[[:space:]]*//')
+    param=$(cat '../include/'"${CONF_D}"'conf.hpp' | grep $(echo ':'"$1"' ') | tail -1 | cut -d'=' -f 2 | cut -d';' -f 1 | sed -e 's/^[[:space:]]*//')
     echo "${param}"
 }
 
