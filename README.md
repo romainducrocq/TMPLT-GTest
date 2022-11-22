@@ -60,7 +60,7 @@ $ ./run.sh -m main
 ### Log
 `./log.sh [-V] <cmd>`  
 ```
-* Example : $ ./log.sh ./mains.sh
+* Example : $ ./log.sh ./main.sh
 * Example : $ ./log.sh -V ./test.sh
 ```
 
