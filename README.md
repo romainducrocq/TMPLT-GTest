@@ -1,4 +1,4 @@
-# [C++] Template / Example for the GTest testing framework
+# [C++] Template / Example for the GTest framework
 
 - Gtest documenation : http://google.github.io/googletest/reference/testing.html
 - Gtest source : https://github.com/google/googletest
